@@ -13,6 +13,17 @@ elseif platform.is_win or platform.is_linux then
    mod.SUPER_REV = 'ALT|CTRL'
 end
 
+local copy_mod
+local paste_mod
+
+if platform.is_mac then
+   copy_mod = 'CMD'
+   paste_mod = 'CMD'
+elseif platform.is_win or platform.is_linux then
+   copy_mod = 'CTRL|SHIFT'
+   paste_mod = 'CTRL'
+end
+
 -- stylua: ignore
 local keys = {
    -- misc/useful --
@@ -54,8 +65,8 @@ local keys = {
    { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
 
    -- copy/paste --
-   { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
-   { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
+   { key = 'c',          mods = copy_mod,  action = act.CopyTo('Clipboard') },
+   { key = 'v',          mods = paste_mod,  action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
