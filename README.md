@@ -186,36 +186,42 @@
     ```
     
     > More Info:
-    >
     > - <https://www.nerdfonts.com/#home>
     > - <https://github.com/ryanoasis/nerd-fonts?#font-installation>
-    >   </details/>
     
     Install manually (MacOS, Linux)
-   ```sh
-   mkdir -p ~/Downloads/wezterm
-   cd ~/Downloads/wezterm
-   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
-   unzip -d JetBrainsMono JetBrainsMono.zip
-   mv ./JetBrainsMono/*.ttf ~/.local/share/fonts/
-   ```
-   - <details>
-   <summary>Chinses support (FandolSong)</summary>
-   ```sh
-   mkdir -p ~/Downloads/wezterm
-   cd ~/Downloads/wezterm
-   mkdir Fando
-   cd Fando
-   wget https://mirrors.ctan.org/fonts/fandol/FandolBraille-Display.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolBraille-Regular.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolFang-Regular.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolHei-Bold.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolHei-Regular.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolKai-Regular.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolSong-Bold.otf
-   wget https://mirrors.ctan.org/fonts/fandol/FandolSong-Regular.otf
-   mv *.otf ~/.local/share/fonts/
-   ```
+    ```sh
+    mkdir -p ~/Downloads/wezterm
+    cd ~/Downloads/wezterm
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+    unzip -d JetBrainsMono JetBrainsMono.zip
+    mkdir ~/.local/share/fonts/
+    mv ./JetBrainsMono/*.ttf ~/.local/share/fonts/
+    ```
+
+    </details/>
+
+  - <details>
+    <summary>Chinses support (FandolSong)</summary>
+
+    ```sh
+    mkdir -p ~/Downloads/wezterm
+    cd ~/Downloads/wezterm
+    mkdir Fando
+    cd Fando
+    wget https://mirrors.ctan.org/fonts/fandol/FandolBraille-Display.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolBraille-Regular.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolFang-Regular.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolHei-Bold.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolHei-Regular.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolKai-Regular.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolSong-Bold.otf
+    wget https://mirrors.ctan.org/fonts/fandol/FandolSong-Regular.otf
+    mkdir ~/.local/share/fonts/
+    mv *.otf ~/.local/share/fonts/
+    ```
+
+    </details/>
   
 
  &nbsp;
@@ -224,7 +230,7 @@
 
   1.  ```sh
       # On Windows and Unix systems
-      git clone https://github.com/KevinSilvester/wezterm-config.git ~/.config/wezterm
+      git clone https://github.com/lyxichigoichie/wezterm-config.git ~/.config/wezterm
       ```
   2.  And Done!!! 🎉🎉
 
