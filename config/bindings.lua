@@ -250,6 +250,14 @@ local key_tables = {
 }
 
 local mouse_bindings = {
+   -- 当没有任何修饰键时，单击左键不执行任何操作
+   -- 这会覆盖掉默认的单击打开链接行为
+   {
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'NONE',
+      action = wezterm.action.Nop,
+   },
+   
    -- Ctrl-click will open the link under the mouse cursor
    {
       event = { Up = { streak = 1, button = 'Left' } },
@@ -260,7 +268,7 @@ local mouse_bindings = {
 
 return {
    disable_default_key_bindings = true,
-   disable_default_mouse_bindings = true,
+   -- disable_default_mouse_bindings = true,
    leader = { key = 'Space', mods = mod.SUPER_REV },
    keys = keys,
    key_tables = key_tables,
